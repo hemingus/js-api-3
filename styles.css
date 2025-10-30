@@ -1,1 +1,33 @@
 /* Styles */
+
+.joke-container {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 3rem;
+    background: rgb(55, 0, 40);
+}
+
+.joke-card {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to top right, rgb(0, 119, 255) -50%, rgb(10, 57, 0), rgb(0, 119, 255) 150%);
+    color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.joke-card h3 {
+    font-size: 1.5rem;
+}
+
+.joke-card p {
+    font-size: 1.3rem;
+}
