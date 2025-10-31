@@ -1,5 +1,13 @@
 /* Styles */
 
+body {
+    background: brown;
+    min-height: 200vh;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><text y="24" font-size="24">👻</text></svg>')
+      16 16,
+    auto;
+}
+
 .joke-container {
     max-width: 800px;
     display: flex;
@@ -30,4 +38,76 @@
 
 .joke-card p {
     font-size: 1.3rem;
+}
+
+
+/* Extra */
+.ghost {
+    position: fixed;
+    top: 40%;
+    right: 10%;
+    width: 100px;
+    height: 120px;
+    background: white;
+    border-radius: 50% 50% 30% 30% / 60% 60% 40% 40%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    z-index: 100;
+    opacity: 1;
+}
+.ghost::before,
+.ghost::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 33%;
+    height: 30%;
+    background: white;
+    border-radius: 50%;
+}
+
+.ghost::before {
+    left: 0;
+}
+.ghost::after {
+    right: 0;
+}
+
+.ghost .eyes {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ghost .eyes::before,
+.ghost .eyes::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: black;
+    border-radius: 50%;
+}
+
+@keyframes floaty {
+    0% {
+        transform: (translate(0, 0));
+    } 
+    20% { 
+        transform: (translate(-20px, -15px));
+    } 
+    40% {
+        transform: (translate(-20px, -15px));
+    } 
+    60% {
+        transform: (translate(-20px, -15px));
+    }
+    80% {
+        transform: (translate(-20px, -15px));
+    } 
+    100% {
+        transform: (translate(-20px, -15px));
+    }
 }
