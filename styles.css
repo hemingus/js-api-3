@@ -40,6 +40,10 @@ body {
     font-size: 1.3rem;
 }
 
+.joke-card img {
+    width: 100%;
+}
+
 
 /* Extra */
 .ghost {
