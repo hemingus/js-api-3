@@ -18,7 +18,7 @@ export async function getAnyJoke() {
 
 export async function getJokeByCategory(category) {
     try {
-        const res = await fetch(`https://v2.jokeapi.dev/joke/${category}?amount=11`, {
+        const res = await fetch(`https://v2.jokeapi.dev/joke/${category}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -33,3 +33,18 @@ export async function getJokeByCategory(category) {
         return null;
     }
 }
+
+export async function generateImage(prompt) { 
+    try {
+        const res = await fetch(`https://image.pollinations.ai/prompt/A silly cartoon style of: ${encodeURIComponent(prompt)}`)
+        if (!res.ok) throw new Error("Failed to fetch image");
+        return res.url;
+    }
+    catch (err) {
+        console.error(err);
+        return ("a cute confused tiny dragon");
+    }    
+}
+    
+
+
