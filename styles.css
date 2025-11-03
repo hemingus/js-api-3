@@ -1,13 +1,13 @@
 /* Styles */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
-  background-image: radial-gradient(rgb(164, 255, 193), black);
+    background-image: radial-gradient(rgb(164, 255, 193), black);
 }
 
 body {
@@ -25,10 +25,14 @@ body {
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: cursive;
 }
 
 .joke-container {
@@ -89,7 +93,7 @@ main {
     bottom: 0;
     width: 33%;
     height: 30%;
-    background: white;
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
 }
 
