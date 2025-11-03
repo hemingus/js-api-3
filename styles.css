@@ -73,54 +73,16 @@ h1 {
 
 
 /* Extra */
-.ghost {
+.laughing-dragon {
     position: fixed;
     top: 40%;
     right: 10%;
-    width: 100px;
-    height: 120px;
-    background-image: url("./assets/laughing-dragon.png");
-    border-radius: 50% 50% 30% 30% / 60% 60% 40% 40%;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    width: 20%;
+    background-image: url("./assets/images/laughing-dragon.png");
+    background-size: cover;
     z-index: 100;
     opacity: 1;
     animation: floaty 1s ease-in infinite;
-}
-.ghost::before,
-.ghost::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 33%;
-    height: 30%;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-}
-
-.ghost::before {
-    left: 0;
-}
-.ghost::after {
-    right: 0;
-}
-
-.ghost .eyes {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.ghost .eyes::before,
-.ghost .eyes::after {
-    content: "";
-    width: 15px;
-    height: 15px;
-    background: black;
-    border-radius: 50%;
 }
 
 @keyframes floaty {
