@@ -7,7 +7,7 @@
 }
 
 :root {
-    background-image: radial-gradient(rgb(164, 255, 193), black);
+    background-image: radial-gradient(rgb(238, 255, 164), black);
 }
 
 body {
@@ -52,10 +52,12 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to top right, rgb(0, 119, 255) -50%, rgb(10, 57, 0), rgb(0, 119, 255) 150%);
+    background-image: linear-gradient(to bottom, rgb(0, 84, 112) -100%, rgb(14, 42, 23), rgb(67, 255, 123) 200%);
     color: white;
     border-radius: 1rem;
     padding: 1rem;
+    border: 1px solid skyblue;
+    gap: 2rem;
 }
 
 .joke-card h3 {
