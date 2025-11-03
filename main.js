@@ -18,6 +18,7 @@ getJokeButton.addEventListener("click", async (e) => {
     jokeCategory.append(jokeIcon);
     jokeCategory.textContent = `${data.category}`;
     jokeHeader.append(jokeIcon, jokeCategory);
+    jokeHeader.classList.add("joke-card-header");
     jokeCard.append(jokeHeader);
     const imageElement = document.createElement("img");
     
