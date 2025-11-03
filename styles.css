@@ -12,6 +12,7 @@
 
 body {
     background-image: url("./assets/images/laughing-crowd-bg.png");
+    background-blend-mode: multiply;
     background-size: cover;
     width: 100%;
     min-height: 200vh;
@@ -46,7 +47,7 @@ h1 {
 }
 
 .joke-container {
-    max-width: 800px;
+    max-width: 1000px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,25 +63,45 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to bottom, rgb(0, 84, 112) -100%, rgb(14, 42, 23), rgb(67, 255, 123) 200%);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 1));
     color: white;
     border-radius: 1rem;
-    padding: 1rem;
-    border: 1px solid skyblue;
+    padding: 2rem;
+    /* border: 2px solid black; */
     gap: 2rem;
 }
 
 .joke-card h3 {
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 2.3vw, 2rem);
 }
 
 .joke-card p {
-    font-size: 1.3rem;
+    font-size: clamp(1.3rem, 2vw, 1.7rem);
+    font-family: sans-serif;
+    text-align: center;
+    background-image: radial-gradient(rgba(39, 31, 31, 1), black);
+    border-radius: 1rem;
+    padding: 1rem 2rem;
 }
 
 .joke-card img {
     width: 60%;
     border-radius: 1rem;
+}
+
+.joke-card-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(rgba(39, 31, 31, 1), black);
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.joke-card-header img {
+    width: 50px;
 }
 
 
@@ -113,4 +134,13 @@ h1 {
   100% {
     transform: translate(0, 0); /* back to start */
   }
+}
+
+@media (max-width: 468px) {
+    .joke-card img {
+        width: 80%;
+    }
+    .joke-card-header img {
+        width: 50px;
+    }
 }
