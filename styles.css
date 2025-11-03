@@ -57,6 +57,7 @@ body {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
     z-index: 100;
     opacity: 1;
+    animation: floaty 1s ease-in infinite;
 }
 .ghost::before,
 .ghost::after {
@@ -96,22 +97,19 @@ body {
 }
 
 @keyframes floaty {
-    0% {
-        transform: (translate(0, 0));
-    } 
-    20% { 
-        transform: (translate(-20px, -15px));
-    } 
-    40% {
-        transform: (translate(-20px, -15px));
-    } 
-    60% {
-        transform: (translate(-20px, -15px));
-    }
-    80% {
-        transform: (translate(-20px, -15px));
-    } 
-    100% {
-        transform: (translate(-20px, -15px));
-    }
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(20px, -20px); /* top-right */
+  }
+  50% {
+    transform: translate(40px, 0); /* right */
+  }
+  75% {
+    transform: translate(20px, 20px); /* bottom-right */
+  }
+  100% {
+    transform: translate(0, 0); /* back to start */
+  }
 }
