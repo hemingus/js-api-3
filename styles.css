@@ -1,11 +1,34 @@
 /* Styles */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  background-image: radial-gradient(rgb(164, 255, 193), black);
+}
+
 body {
-    background: brown;
+    background-image: url("./assets/images/laughing-crowd-bg.png");
+    background-size: cover;
+    width: 100%;
     min-height: 200vh;
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><text y="24" font-size="24">👻</text></svg>')
       16 16,
     auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .joke-container {
@@ -16,7 +39,6 @@ body {
     align-items: center;
     gap: 1rem;
     padding: 3rem;
-    background: rgb(55, 0, 40);
 }
 
 .joke-card {
@@ -42,6 +64,7 @@ body {
 
 .joke-card img {
     width: 60%;
+    border-radius: 1rem;
 }
 
 
@@ -52,7 +75,7 @@ body {
     right: 10%;
     width: 100px;
     height: 120px;
-    background: white;
+    background-image: url("./assets/laughing-dragon.png");
     border-radius: 50% 50% 30% 30% / 60% 60% 40% 40%;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
     z-index: 100;
