@@ -17,3 +17,20 @@ export function getCategoryIcon(category) {
             return path + "misc-icon.png"
     }
 }
+
+export function createLoadingCard() {
+    const loadingCard = document.createElement("div")
+    loadingCard.classList.add("joke-card");
+
+    const loadingImage = document.createElement("img");
+    loadingImage.src = "./assets/images/sitting_dragon.png";
+    loadingImage.alt = "Green cartoon dragon sitting and waiting."
+    
+    const loadingText = document.createElement("p");
+    loadingText.textContent = "Loading joke..."
+    loadingText.classList.add("loading-text");
+    loadingCard.append(loadingImage, loadingText);
+
+    return loadingCard;
+}
+
