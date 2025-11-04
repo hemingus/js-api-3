@@ -37,6 +37,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
 }
 
 h1 {
@@ -45,6 +46,37 @@ h1 {
     width: 100%;
     font-size: clamp(1.5rem, 2vw, 2rem);
     text-align: center;
+}
+
+#getJokeButton {
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    padding: 1rem;
+    background-image: radial-gradient( #1DAE80, #7250B2);
+    border-radius: 1rem;
+    font-weight: 900;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: white;
+    border: 5px ridge #8360C3;
+}
+
+#getJokeButton:hover {
+    transform: scale(105%);
+}
+
+main label {
+    margin-top: 1rem;
+    color: white;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    background-color: black;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+main select {
+    background-color: black;
+    color: orange;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
 }
 
 .joke-container {
