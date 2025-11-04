@@ -37,12 +37,12 @@ export async function getJokeByCategory(category) {
 export async function generateImage(prompt) { 
     try {
         const res = await fetch(`https://image.pollinations.ai/prompt/A silly cartoon style pure image of ${encodeURIComponent(prompt)}`);
-        if (!res.ok) throw new Error("Failed to fetch image");
+        if (!res.ok) return ("./assets/images/sitting_dragon_laugh.png");
         return res.url;
     }
     catch (err) {
         console.error(err);
-        return ("a cute confused tiny dragon");
+        return ("./assets/images/siiting_dragon_laugh.png");
     }    
 }
     
