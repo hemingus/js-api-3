@@ -7,13 +7,14 @@
 }
 
 :root {
-    background-image: radial-gradient(rgb(238, 255, 164), black);
+    background-image: radial-gradient(rgba(252, 255, 101, 1), black);
 }
 
 body {
     background-image: url("./assets/images/laughing-crowd-bg.png");
     background-blend-mode: multiply;
-    background-size: cover;
+    background-size: contain;
+    /* background-repeat: no-repeat; */
     width: 100%;
     min-height: 200vh;
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><text y="24" font-size="24">🤣</text></svg>')
@@ -26,10 +27,9 @@ body {
 }
 
 header {
-    margin-top: 1rem;
-    background-image: linear-gradient(rgb(58, 111, 2), rgb(69, 173, 69));
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(59, 59, 59, 1));
     padding: 1rem;
-    border-radius: 1rem;
 }
 
 main {
@@ -44,6 +44,7 @@ h1 {
     color: rgb(255, 255, 255);
     width: 100%;
     font-size: clamp(1.5rem, 2vw, 2rem);
+    text-align: center;
 }
 
 .joke-container {
@@ -53,7 +54,7 @@ h1 {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    padding: 3rem;
+    padding: 1rem;
 }
 
 .joke-card {
@@ -67,7 +68,6 @@ h1 {
     color: white;
     border-radius: 1rem;
     padding: 2rem;
-    /* border: 2px solid black; */
     gap: 2rem;
 }
 
@@ -85,7 +85,7 @@ h1 {
 }
 
 .joke-card img {
-    width: 60%;
+    width: 100%;
     border-radius: 1rem;
 }
 
@@ -104,18 +104,23 @@ h1 {
     width: 50px;
 }
 
+.loading-text {
+    position: absolute;
+    animation: blinking 1s ease-out infinite;
+}
+
 
 /* Extra */
 .laughing-dragon {
     position: fixed;
-    top: 40%;
+    top: 20%;
     right: 10%;
     width: clamp(150px, 20%, 250px);
     background-image: url("./assets/images/laughing-dragon.png");
     background-size: cover;
     z-index: 100;
     opacity: 1;
-    animation: floaty 1s ease-in infinite;
+    animation: floaty 2s linear infinite;
 }
 
 @keyframes floaty {
@@ -136,11 +141,14 @@ h1 {
   }
 }
 
-@media (max-width: 468px) {
-    .joke-card img {
-        width: 80%;
+@keyframes blinking {
+    0% {
+        opacity: 1;
     }
-    .joke-card-header img {
-        width: 50px;
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
