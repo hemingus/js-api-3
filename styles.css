@@ -7,14 +7,15 @@
 }
 
 :root {
-    background-image: radial-gradient(rgba(252, 255, 101, 1), black);
+    background-image: radial-gradient(rgba(244, 255, 97, 1), black);
+    font-family: Trebuchet MS, sans-serif;
 }
 
 body {
     background-image: url("./assets/images/laughing-crowd-bg.png");
     background-blend-mode: multiply;
     background-size: contain;
-    /* background-repeat: no-repeat; */
+    background-repeat: no-repeat;
     width: 100%;
     min-height: 200vh;
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><text y="24" font-size="24">🤣</text></svg>')
@@ -28,7 +29,7 @@ body {
 
 header {
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(59, 59, 59, 1));
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 1rem;
 }
 
@@ -40,11 +41,25 @@ main {
     gap: 1rem;
 }
 
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2b3500ff;
+    color: #ddd;
+    text-align: center;
+    padding: 1rem;
+    z-index: 1000;
+    border-top: 1px solid #728b00ff;
+    font-size: 1.2rem;
+}
+
 h1 {
-    font-family: cursive;
+    font-family: Trebuchet MS, sans-serif;
     color: rgb(255, 255, 255);
     width: 100%;
-    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-size: clamp(1.7rem, 2.2vw, 2.2rem);
     text-align: center;
 }
 
@@ -58,29 +73,37 @@ h1 {
     transition: 0.3s ease;
     color: white;
     border: 5px ridge #8360C3;
+    text-shadow: 5px 5px 2px black;
 }
 
 #getJokeButton:hover {
     transform: scale(105%);
+    box-shadow: 2px 2px 2px 2px black;
 }
 
 main label {
+    display: grid;
+    gap: 0.4rem;
     margin-top: 1rem;
     color: white;
     font-size: clamp(1.5rem, 2vw, 2rem);
-    background-color: black;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 600;
+    background-image: radial-gradient(rgba(0, 154, 214, 1), rgba(0, 0, 0, 1));
     border-radius: 1rem;
     padding: 1rem;
 }
 
 main select {
     background-color: black;
-    color: orange;
+    color: #ffe159ff;
     font-size: clamp(1.2rem, 2vw, 1.5rem);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
 }
 
 .joke-container {
-    max-width: 1000px;
+    max-width: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -96,7 +119,7 @@ main select {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: radial-gradient(rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 1));
+    background-image: radial-gradient(rgba(0, 154, 214, 1), rgba(0, 0, 0, 1));
     color: white;
     border-radius: 1rem;
     padding: 2rem;
