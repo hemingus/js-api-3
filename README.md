@@ -1,2 +1,3 @@
-## Fetching data from APIs using Vanilla Javascript.
-# Specifics coming.
+# Joke Generator App
+## Fetching jokes from jokeapi.dev,
+## AI generated images for each joke with pollinations.ai.
