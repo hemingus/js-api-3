@@ -49,7 +49,7 @@ export async function generateImage(prompt, timeout = 5000) {
     }
     catch (err) {
         console.error(err);
-        return ("./assets/images/siiting_dragon_laugh.png");
+        return ("./assets/images/sitting_dragon_laugh.png");
     }    
 }
     
