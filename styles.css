@@ -7,7 +7,7 @@
 }
 
 :root {
-    background-image: radial-gradient(rgb(139, 235, 246), black);
+    background-image: radial-gradient(rgb(103, 255, 161), black);
     font-family: Trebuchet MS, sans-serif;
 }
 
@@ -46,12 +46,12 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgb(0, 41, 58);
+    background-color: #0b3f2e;
     color: #ddd;
     text-align: center;
     padding: 1rem;
     z-index: 1000;
-    border-top: 1px solid rgb(0, 76, 139);
+    border-top: 1px solid rgba(0, 255, 128, 0.5);
     font-size: 1.2rem;
 }
 
