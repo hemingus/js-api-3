@@ -4,15 +4,18 @@ import { getCategoryIcon, createLoadingCard } from "./utils.js";
 
 const categorySelect = document.querySelector("#jokeCategory");
 const getJokeButton = document.querySelector("#getJokeButton");
+const safeMode = document.querySelector("#safeMode");
 const jokeContainer = document.querySelector("#jokeContainer");
+const safeText = document.querySelector("#safeText");
 let loading = null;
+let safe = true;
 
 getJokeButton.addEventListener("click", async (e) => {
     loading = true;
     jokeContainer.replaceChildren();
     jokeContainer.append(createLoadingCard());
 
-    const data = await getJokeByCategory(categorySelect.value);
+    const data = await getJokeByCategory(categorySelect.value, safe);
 
     const jokeCard = document.createElement("div");
     jokeCard.classList.add("joke-card");
@@ -45,4 +48,10 @@ getJokeButton.addEventListener("click", async (e) => {
         jokeContainer.append(jokeCard);
     }
 })
+
+safeMode.addEventListener("click", (e) => {
+    safe = !safe;
+    safeText.textContent = safe ? `👼 Safe 👼` : `😈 Not Safe 😈 `;
+})
+
 
