@@ -14,7 +14,7 @@ export async function getJokeByCategory(category, isSafe) {
     }
     catch (err) {
         console.error(err);
-        return null;
+        return {category: "Spooky", joke: "Unfortunately... The joke is on you!"};
     }
 }
 
